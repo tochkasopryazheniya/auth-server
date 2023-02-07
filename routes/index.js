@@ -18,5 +18,8 @@ router.get('/activate/:link', userController.activate);
 router.get('/refresh', userController.refresh);
 
 router.get('/users', authMiddleware, userController.getUsers);
+router.get('/', function (req,res) {
+    res.json({message: 'Hello'})
+});
 
 module.exports = router;
