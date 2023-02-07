@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/api/env node
 
 /**
  * Module dependencies.
