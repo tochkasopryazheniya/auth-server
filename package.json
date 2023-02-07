@@ -6,7 +6,7 @@
     "node": "14.x"
   },
   "scripts": {
-    "start": "node api/index.js"
+    "start": "nodemon api/index.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
