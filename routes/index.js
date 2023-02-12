@@ -17,7 +17,7 @@ router.get('/refresh', userController.refresh);
 
 router.get('/users', authMiddleware, userController.getUsers);
 
-router.get('/', (req, res) => {
+router.get('/info', (req, res) => {
     res.json({hello: 'Hello World'})
 });
 
