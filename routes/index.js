@@ -1,10 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const PouchDB = require('pouchdb');
 const userController = require('../controllers/user-controller');
 const authMiddleware = require('../middleware/auth-middleware');
 
-const users = new PouchDB('datalake/users');
 
 /* GET home page. */
 router.post('/registration', userController.registration);
