@@ -18,6 +18,7 @@ router.get('/refresh', userController.refresh);
 router.get('/users', authMiddleware, userController.getUsers);
 
 router.get('/info', (req, res) => {
+    console.log(process.env.CLIENT_URL)
     res.json({hello: process.env.CLIENT_URL})
 });
 
