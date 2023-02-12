@@ -17,4 +17,8 @@ router.get('/refresh', userController.refresh);
 
 router.get('/users', authMiddleware, userController.getUsers);
 
+router.get('/', (req, res) => {
+    res.json({hello: 'Hello World'})
+});
+
 module.exports = router;
