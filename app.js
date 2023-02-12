@@ -12,7 +12,8 @@ const usersRouter = require('./routes/users');
 const app = express();
 app.use(cors({
     credentials: true,
-    origin: process.env.CLIENT_URL
+    origin: '*',
+    optionSuccessStatus:200
 }));
 
 
