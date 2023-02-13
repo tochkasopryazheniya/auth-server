@@ -10,19 +10,12 @@ const usersRouter = require('./routes/users');
 
 
 const app = express();
-// app.use(cors({
-//     credentials: true,
-//     origin: 'https://auth-client-qa373h9zx-tochkasopryazheniya-gmailcom.vercel.app',
-//     optionSuccessStatus:200
-// }));
-
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://auth-client-qa373h9zx-tochkasopryazheniya-gmailcom.vercel.app");
-    res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
-    res.setHeader("Access-Control-Allow-Headers", "*");
-    res.setHeader("Access-Control-Allow-Credentials", "true");
-    next();
-})
+app.use(cors({
+    credentials: true,
+    origin: ['https://auth-client-pb6j22s6z-tochkasopryazheniya-gmailcom.vercel.app', 'http://localhost:3000'],
+    optionSuccessStatus:200,
+    allowedHeaders: 'Access-Control-Allow-Headers,Origin,X-Requested-With,Content-Type,Accept,Authorization'
+}));
 
 
 app.use(logger('dev'));
@@ -34,5 +27,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use(errorMiddleWare)
+console.log(1);
 
 module.exports = app;
