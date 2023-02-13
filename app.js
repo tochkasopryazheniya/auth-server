@@ -12,7 +12,7 @@ const usersRouter = require('./routes/users');
 const app = express();
 app.use(cors({
     credentials: true,
-    origin: '*',
+    origin: 'https://auth-client-qa373h9zx-tochkasopryazheniya-gmailcom.vercel.app/',
     optionSuccessStatus:200
 }));
 
